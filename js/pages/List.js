@@ -98,31 +98,90 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3>Submission Requirements</h3>
-                    <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
-                    </p>
-                    <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
-                    </p>
-                    <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
-                    </p>
-                    <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
-                    </p>
-                    <p>
-                        The recording must also show the player hit the endwall, or the completion will be invalidated.
-                    </p>
-                    <p>
-                        Do not use secret routes or bug routes
-                    </p>
-                    <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
-                    </p>
-                    <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
-                    </p>
+                    <h1>🌀 AVEDL Submission Requirements</h1>
+<p><strong>All Verified Extreme Demons List (AVEDL)</strong> includes every verified Extreme Demon in Geometry Dash — including unrated levels and challenge-style extremes. If a level or record isn’t yet on the list, please submit it using the appropriate Google Form.</p>
+
+<hr>
+
+<h2>🔹 1. Submitting a New Level</h2>
+<p>If an Extreme Demon is <strong>not yet listed on AVEDL</strong>, you may submit it for review. Please ensure your submission meets the following requirements:</p>
+
+<h3>✅ Level Requirements</h3>
+<ul>
+  <li><strong>Difficulty:</strong> Must clearly qualify as an <strong>Extreme Demon</strong>.</li>
+  <li><strong>Verification:</strong> Must be legitimately verified (no hacks, noclip, or tool-assisted verification).</li>
+  <li><strong>Verifier Identification:</strong> Provide the verifier’s in-game name and YouTube channel (if available).</li>
+  <li><strong>Release Status:</strong> The level must be publicly accessible (published or uploaded as a copy).</li>
+  <li><strong>Visibility:</strong> Unrated levels and private uploads are allowed, as long as verifier proof is available.</li>
+</ul>
+
+<h3>📝 Submission Form Details</h3>
+<p>Please include the following information:</p>
+<ol>
+  <li>Level Name</li>
+  <li>Creator(s)</li>
+  <li>Verifier</li>
+  <li>Verification Video Link (YouTube, Twitch VOD, or other verifiable source)</li>
+  <li>Level ID</li>
+  <li>Copy Password (if available)</li>
+  <li>Any Notes (e.g., collab info, remake, buffed/nerfed version)</li>
+</ol>
+
+<h3>⚠️ Verification Proof Guidelines</h3>
+<ul>
+  <li>The verification video must show the entire attempt from the level’s start to finish.</li>
+  <li>No cuts, speed changes, or suspicious transitions are allowed.</li>
+  <li>FPS bypass is allowed up to 360 FPS.</li>
+  <li>Practice Mode completions do <strong>not</strong> count as verifications.</li>
+  <li>If the verifier is not the creator, make sure permission and credit are properly attributed.</li>
+</ul>
+
+<hr>
+
+<h2>🔹 2. Submitting a Record on an Existing Level</h2>
+<p>If you’ve beaten an Extreme Demon already on the AVEDL, you can submit your record for placement.</p>
+
+<h3>✅ Record Requirements</h3>
+<ul>
+  <li>Completion must be a <strong>full 100%</strong> of the level.</li>
+  <li>Legitimacy: Must be achieved without hacks, speed hacks, or macro abuse.</li>
+  <li><strong>Video Proof:</strong>
+    <ul>
+      <li>Complete, unedited video of the run is required.</li>
+      <li>FPS counter must be visible or verifiable through game overlay.</li>
+      <li>If using a modded client (e.g., MegaHack), ensure that no banned features were enabled.</li>
+      <li>Allowed FPS: up to 360 FPS. Anything higher requires proof it does not affect gameplay balance.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>📝 Submission Form Details</h3>
+<ol>
+  <li>Player Name</li>
+  <li>Level Name</li>
+  <li>Completion Percentage (100%)</li>
+  <li>Video Link (YouTube or other trusted platform)</li>
+  <li>Raw Footage Link (if available)</li>
+  <li>FPS Used</li>
+  <li>Additional Notes (e.g., platform, input method)</li>
+</ol>
+
+<h3>⚠️ Additional Rules</h3>
+<ul>
+  <li>Records on copies are accepted only if the copy is identical to the official version.</li>
+  <li>Edited or spliced footage will result in rejection.</li>
+  <li>AVEDL staff may request additional proof or conduct re-verification if legitimacy is uncertain.</li>
+</ul>
+
+<hr>
+
+<h2>🔹 3. Important Notes</h2>
+<ul>
+  <li>Submissions are reviewed by AVEDL moderators for difficulty validation and legitimacy.</li>
+  <li>All accepted submissions are added to the official list with proper credit.</li>
+  <li>False or fraudulent submissions will result in a ban from future submissions.</li>
+</ul>
+
                 </div>
             </div>
         </main>
