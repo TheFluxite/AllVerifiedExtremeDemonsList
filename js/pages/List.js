@@ -144,7 +144,7 @@ export default {
 
 <h3>✅ Record Requirements</h3>
 <ul>
-  <li>Completion must be a <strong>full 100%</strong> of the level.</li>
+  <li>Record must be a <strong>at least the Qualifying Percentage</strong> of the level.</li>
   <li>Legitimacy: Must be achieved without hacks, speed hacks, or macro abuse.</li>
   <li><strong>Video Proof:</strong>
     <ul>
