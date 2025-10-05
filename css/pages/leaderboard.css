@@ -64,7 +64,12 @@
     table-layout: auto;
 }
 
+/* --- FIX: Proper spacing & alignment --- */
 .page-leaderboard .board tr {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem; /* rank | user | total */
+    align-items: center;
+    width: 100%;
     transition: background var(--transition);
 }
 
@@ -72,26 +77,22 @@
     background: var(--color-surface-hover, #f5f7fa);
 }
 
+/* Rank */
 .page-leaderboard .board .rank {
-    padding: 1rem;
-    text-align: end;
+    text-align: right;
+    justify-self: end;
     font-weight: 600;
     color: var(--color-primary);
+    padding: 1rem 0.5rem;
 }
 
-.page-leaderboard .board .total {
-    padding: 1rem;
-    text-align: end;
-    font-weight: 500;
-    color: var(--color-on-background);
-    opacity: 0.9;
-}
-
+/* User */
 .page-leaderboard .board .user {
+    text-align: left;
+    justify-self: start;
     width: 100%;
 }
 
-/* --- User Buttons --- */
 .page-leaderboard .board .user button {
     background-color: var(--color-surface, #fff);
     color: var(--color-on-background);
@@ -116,6 +117,16 @@
     font-weight: 600;
 }
 
+/* Total / Hz column */
+.page-leaderboard .board .total {
+    text-align: right;
+    justify-self: end;
+    font-weight: 500;
+    color: var(--color-on-background);
+    opacity: 0.9;
+    padding: 1rem 0.5rem;
+}
+
 /* --- Player Details --- */
 .page-leaderboard .player {
     display: flex;
@@ -124,7 +135,7 @@
     padding: 2rem;
 }
 
-/* --- Player Records --- */
+/* --- Player Records Table --- */
 .page-leaderboard .player .table {
     width: 100%;
     border-collapse: collapse;
@@ -134,7 +145,12 @@
     overflow: hidden;
 }
 
+/* FIX: Align percent | user | hz properly */
 .page-leaderboard .player .table tr {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem; /* percent | user | hz */
+    align-items: center;
+    width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -143,26 +159,33 @@
 }
 
 .page-leaderboard .player .table td {
-    padding: 1rem 1rem;
+    padding: 0.75rem 1rem;
 }
 
-.page-leaderboard .player .table tr td:not(:last-child) {
-    padding-right: 2rem;
-}
-
-/* --- Player Table Alignment --- */
+/* Percent */
 .page-leaderboard .player .table .rank p,
-.page-leaderboard .player .table .score p {
-    text-align: end;
+.page-leaderboard .player .table .percent p {
+    text-align: right;
     font-weight: 600;
     color: var(--color-primary);
 }
 
-.page-leaderboard .player .table .level {
+/* User cell */
+.page-leaderboard .player .table .user {
+    text-align: left;
+    justify-self: start;
     width: 100%;
 }
 
-/* --- Links --- */
+/* Hz column */
+.page-leaderboard .player .table .hz p,
+.page-leaderboard .player .table .score p {
+    text-align: right;
+    font-weight: 500;
+    color: var(--color-on-background);
+}
+
+/* Links */
 .page-leaderboard .player .table a {
     color: var(--color-primary);
     text-decoration: none;
@@ -174,35 +197,17 @@
     text-decoration: underline;
 }
 
-/* --- Fix overlapping text in list and leaderboard tables --- */
-.page-list .level-container .level .records tr,
-.page-leaderboard .board tr {
-    display: grid;
-    grid-template-columns: 5rem 1fr 5rem; /* left | center | right */
-    align-items: center;
-    width: 100%;
-}
-
-.page-list .level-container .level .records .percent,
-.page-leaderboard .board .rank {
-    text-align: right;
-    justify-self: end;
-}
-
-.page-list .level-container .level .records .user,
-.page-leaderboard .board .user {
-    text-align: left;
-    justify-self: start;
-}
-
-.page-list .level-container .level .records .hz,
-.page-leaderboard .board .total {
-    text-align: right;
-    justify-self: end;
-}
-
-/* Optional: spacing tweak */
-.page-list .level-container .level .records td,
-.page-leaderboard .board td {
-    padding-block: 0.75rem;
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 1024px) {
+    .page-leaderboard {
+        grid-template-columns: 1fr;
+    }
+    .page-leaderboard .board-container,
+    .page-leaderboard .player-container {
+        padding: 1rem;
+    }
+    .page-leaderboard .board tr,
+    .page-leaderboard .player .table tr {
+        grid-template-columns: 4rem 1fr 4rem;
+    }
 }
