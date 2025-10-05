@@ -1,93 +1,175 @@
 .page-leaderboard-container {
     display: block;
+    background: var(--color-background);
+    color: var(--color-on-background);
+    padding: 2rem;
 }
+
+/* --- Grid Layout --- */
 .page-leaderboard {
     height: 100%;
     display: grid;
-    grid-template-columns: minmax(24rem, 2fr) 3fr;
+    grid-template-columns: minmax(22rem, 2fr) 3fr;
     grid-template-rows: max-content 1fr;
     column-gap: 2rem;
     max-width: 80rem;
     margin: 0 auto;
+    gap: 2rem;
 }
+
+/* --- Scrolling Panels --- */
 .page-leaderboard > div {
     overflow-y: auto;
+    background: var(--color-surface, #fff);
+    border-radius: var(--radius, 0.75rem);
+    box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.08));
+    transition: background var(--transition, 0.2s ease),
+                box-shadow var(--transition, 0.2s ease);
 }
+
+.page-leaderboard > div:hover {
+    background: var(--color-surface-hover, #f8f9fb);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Error Message --- */
 .page-leaderboard .error-container {
     grid-row: 1;
     grid-column: 1 / span 2;
 }
+
 .page-leaderboard .error-container .error {
-    padding: 1rem;
+    padding: 1rem 1.25rem;
     background-color: var(--color-error);
     color: var(--color-on-error);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
+
+/* --- Containers --- */
 .page-leaderboard .board-container,
 .page-leaderboard .player-container {
     grid-row: 2;
     padding-block: 2rem;
 }
+
 .page-leaderboard .board-container {
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
 }
+
+/* --- Leaderboard Table --- */
 .page-leaderboard .board {
-    table-layout: auto;
-    display: block;
     width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
 }
+
+.page-leaderboard .board tr {
+    transition: background var(--transition);
+}
+
+.page-leaderboard .board tr:hover {
+    background: var(--color-surface-hover, #f5f7fa);
+}
+
 .page-leaderboard .board .rank {
-    padding-block: 1rem;
+    padding: 1rem;
     text-align: end;
+    font-weight: 600;
+    color: var(--color-primary);
 }
+
 .page-leaderboard .board .total {
     padding: 1rem;
     text-align: end;
+    font-weight: 500;
+    color: var(--color-on-background);
+    opacity: 0.9;
 }
+
 .page-leaderboard .board .user {
     width: 100%;
 }
+
+/* --- User Buttons --- */
 .page-leaderboard .board .user button {
-    background-color: var(--color-background);
+    background-color: var(--color-surface, #fff);
     color: var(--color-on-background);
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
     text-align: start;
-    word-break: normal;
-    overflow-wrap: anywhere;
-}
-.page-leaderboard .board .user button:hover {
-    background-color: var(--color-background-hover);
-    color: var(--color-on-background-hover);
     cursor: pointer;
+    transition: all var(--transition, 0.2s ease);
+    width: 100%;
 }
+
+.page-leaderboard .board .user button:hover {
+    background-color: var(--color-primary-hover, #005fcc);
+    color: var(--color-on-primary, #fff);
+    transform: translateY(-2px);
+}
+
 .page-leaderboard .board .user.active button {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
+    font-weight: 600;
 }
+
+/* --- Player Details --- */
 .page-leaderboard .player {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-right: 2rem;
+    padding: 2rem;
 }
+
+/* --- Player Records --- */
 .page-leaderboard .player .table {
+    width: 100%;
+    border-collapse: collapse;
     table-layout: fixed;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
 }
+
+.page-leaderboard .player .table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-leaderboard .player .table tr:last-child {
+    border-bottom: none;
+}
+
+.page-leaderboard .player .table td {
+    padding: 1rem 1rem;
+}
+
 .page-leaderboard .player .table tr td:not(:last-child) {
     padding-right: 2rem;
 }
-.page-leaderboard .player .table p,
-.page-leaderboard .player .table a {
-    padding-block: 1rem;
-}
+
+/* --- Player Table Alignment --- */
 .page-leaderboard .player .table .rank p,
 .page-leaderboard .player .table .score p {
     text-align: end;
+    font-weight: 600;
+    color: var(--color-primary);
 }
+
 .page-leaderboard .player .table .level {
     width: 100%;
 }
+
+/* --- Links --- */
+.page-leaderboard .player .table a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
 .page-leaderboard .player .table a:hover {
+    color: var(--color-primary-hover);
     text-decoration: underline;
 }
