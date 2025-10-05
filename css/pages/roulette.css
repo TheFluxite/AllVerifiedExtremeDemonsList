@@ -211,3 +211,36 @@
         order: -1;
     }
 }
+
+/* --- Fix overlapping text in list and leaderboard tables --- */
+.page-list .level-container .level .records tr,
+.page-leaderboard .board tr {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem; /* left | center | right */
+    align-items: center;
+    width: 100%;
+}
+
+.page-list .level-container .level .records .percent,
+.page-leaderboard .board .rank {
+    text-align: right;
+    justify-self: end;
+}
+
+.page-list .level-container .level .records .user,
+.page-leaderboard .board .user {
+    text-align: left;
+    justify-self: start;
+}
+
+.page-list .level-container .level .records .hz,
+.page-leaderboard .board .total {
+    text-align: right;
+    justify-self: end;
+}
+
+/* Optional: spacing tweak */
+.page-list .level-container .level .records td,
+.page-leaderboard .board td {
+    padding-block: 0.75rem;
+}
