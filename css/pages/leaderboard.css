@@ -14,36 +14,18 @@
     column-gap: 2rem;
     max-width: 80rem;
     margin: 0 auto;
-    gap: 2rem;
 }
 
-/* --- Scrolling Panels --- */
-.page-leaderboard > div {
-    overflow-y: auto;
-    background: var(--color-surface, #fff);
-    border-radius: var(--radius, 0.75rem);
-    box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, 0.08));
-    transition: background var(--transition, 0.2s ease),
-                box-shadow var(--transition, 0.2s ease);
-}
-
-.page-leaderboard > div:hover {
-    background: var(--color-surface-hover, #f8f9fb);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* --- Error Message --- */
+/* --- Error --- */
 .page-leaderboard .error-container {
     grid-row: 1;
     grid-column: 1 / span 2;
 }
-
 .page-leaderboard .error-container .error {
-    padding: 1rem 1.25rem;
+    padding: 1rem;
     background-color: var(--color-error);
     color: var(--color-on-error);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: 0.5rem;
 }
 
 /* --- Containers --- */
@@ -52,7 +34,6 @@
     grid-row: 2;
     padding-block: 2rem;
 }
-
 .page-leaderboard .board-container {
     padding-inline: 1.5rem;
 }
@@ -61,153 +42,107 @@
 .page-leaderboard .board {
     width: 100%;
     border-collapse: collapse;
-    table-layout: auto;
+    table-layout: fixed;
 }
 
-/* --- FIX: Proper spacing & alignment --- */
 .page-leaderboard .board tr {
-    display: grid;
-    grid-template-columns: 5rem 1fr 5rem; /* rank | user | total */
-    align-items: center;
-    width: 100%;
-    transition: background var(--transition);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background 0.2s;
 }
-
 .page-leaderboard .board tr:hover {
-    background: var(--color-surface-hover, #f5f7fa);
+    background: var(--color-background-hover);
 }
 
-/* Rank */
+.page-leaderboard .board td {
+    padding: 0.75rem 0.5rem;
+    vertical-align: middle;
+}
+
+/* Columns */
 .page-leaderboard .board .rank {
+    width: 3rem;
     text-align: right;
-    justify-self: end;
     font-weight: 600;
     color: var(--color-primary);
-    padding: 1rem 0.5rem;
+    white-space: nowrap;
 }
-
-/* User */
+.page-leaderboard .board .total {
+    width: 6rem;
+    text-align: right;
+    font-weight: 500;
+}
 .page-leaderboard .board .user {
-    text-align: left;
-    justify-self: start;
-    width: 100%;
+    width: auto;
 }
 
+/* User button */
 .page-leaderboard .board .user button {
-    background-color: var(--color-surface, #fff);
-    color: var(--color-on-background);
-    border: 1px solid transparent;
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    text-align: start;
-    cursor: pointer;
-    transition: all var(--transition, 0.2s ease);
     width: 100%;
+    background-color: transparent;
+    color: var(--color-on-background);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
 }
 
 .page-leaderboard .board .user button:hover {
-    background-color: var(--color-primary-hover, #005fcc);
-    color: var(--color-on-primary, #fff);
-    transform: translateY(-2px);
+    background-color: var(--color-background-hover);
+    color: var(--color-on-background-hover);
 }
-
 .page-leaderboard .board .user.active button {
     background-color: var(--color-primary);
     color: var(--color-on-primary);
-    font-weight: 600;
 }
 
-/* Total / Hz column */
-.page-leaderboard .board .total {
-    text-align: right;
-    justify-self: end;
-    font-weight: 500;
-    color: var(--color-on-background);
-    opacity: 0.9;
-    padding: 1rem 0.5rem;
-}
-
-/* --- Player Details --- */
+/* --- Player Section --- */
 .page-leaderboard .player {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+    padding-right: 2rem;
 }
 
-/* --- Player Records Table --- */
+/* Records table */
 .page-leaderboard .player .table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    background: var(--color-surface);
-    border-radius: var(--radius);
-    overflow: hidden;
 }
-
-/* FIX: Align percent | user | hz properly */
 .page-leaderboard .player .table tr {
-    display: grid;
-    grid-template-columns: 5rem 1fr 5rem; /* percent | user | hz */
-    align-items: center;
-    width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
-
-.page-leaderboard .player .table tr:last-child {
-    border-bottom: none;
-}
-
 .page-leaderboard .player .table td {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.5rem;
+    vertical-align: middle;
 }
-
-/* Percent */
-.page-leaderboard .player .table .rank p,
-.page-leaderboard .player .table .percent p {
+.page-leaderboard .player .table .percent {
+    width: 4rem;
     text-align: right;
     font-weight: 600;
     color: var(--color-primary);
 }
-
-/* User cell */
 .page-leaderboard .player .table .user {
     text-align: left;
-    justify-self: start;
-    width: 100%;
 }
-
-/* Hz column */
-.page-leaderboard .player .table .hz p,
-.page-leaderboard .player .table .score p {
+.page-leaderboard .player .table .hz {
+    width: 5rem;
     text-align: right;
     font-weight: 500;
-    color: var(--color-on-background);
 }
-
-/* Links */
 .page-leaderboard .player .table a {
     color: var(--color-primary);
     text-decoration: none;
-    transition: color var(--transition);
 }
-
 .page-leaderboard .player .table a:hover {
-    color: var(--color-primary-hover);
     text-decoration: underline;
 }
 
-/* --- Responsive Adjustments --- */
+/* --- Responsive --- */
 @media screen and (max-width: 1024px) {
     .page-leaderboard {
         grid-template-columns: 1fr;
-    }
-    .page-leaderboard .board-container,
-    .page-leaderboard .player-container {
-        padding: 1rem;
-    }
-    .page-leaderboard .board tr,
-    .page-leaderboard .player .table tr {
-        grid-template-columns: 4rem 1fr 4rem;
     }
 }
