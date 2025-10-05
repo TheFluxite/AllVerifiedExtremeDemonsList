@@ -1,0 +1,48 @@
+{
+    "id": 86407629,
+    "name": "Tidal Wave",
+    "author": "OniLink",
+    "creators": [],
+    "verifier": "Zoink",
+    "verification": "https://youtu.be/9fsZ014qB3s",
+    "percentToQualify": "42",
+    "password": "Free Copyable",
+    "records": [
+        {
+            "user": "Trick",
+            "link": "https://www.youtube.com/watch?v=t0o4wsg36l0",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "wPopoff",
+            "link": "https://www.youtube.com/watch?v=mxR1JQmQyrc",
+            "percent": 100,
+            "hz": 360
+        },
+      {
+            "user": "SerVax",
+            "link": "https://www.youtube.com/watch?v=alp09R3eG_4",
+            "percent": 100,
+            "hz": 240
+        },
+      {
+            "user": "Taiago",
+            "link": "https://www.youtube.com/watch?v=wdK7JTw24l0",
+            "percent": 100,
+            "hz": 240
+        },
+      {
+            "user": "Andrey Kapninskii",
+            "link": "https://www.youtube.com/watch?v=gmWPsZ_g_O4",
+            "percent": 100,
+            "hz": 240
+        },
+      {
+            "user": "Netermind",
+            "link": "https://www.youtube.com/watch?v=a2KnQloJiOU",
+            "percent": 74,
+            "hz": 240
+        },
+    ]
+}
