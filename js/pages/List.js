@@ -98,6 +98,7 @@ export default {
                             </li>
                         </ol>
                     </template>
+                    <hr>
                     <h1>🌀 AVEDL Submission Requirements</h1>
 <p><strong>All Verified Extreme Demons List (AVEDL)</strong> includes every verified Extreme Demon in Geometry Dash — including unrated levels and challenge-style extremes. If a level or record isn’t yet on the list, please submit it using the appropriate Google Form.</p>
 
